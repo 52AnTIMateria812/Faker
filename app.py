@@ -1,4 +1,9 @@
 import sys
+
+# Исправление кодировки для Windows консоли
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+
 from logic import demo_profile, demo_address, demo_company, demo_credit_card
 
 def show_menu():
